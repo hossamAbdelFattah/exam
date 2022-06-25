@@ -147,31 +147,114 @@ $("#word").keyup(function ()
 });
 
 
-// $("#name").keyup(userNameValid);
-// $("#email").keyup(userEmailValid);
-// $("#phone").keyup(userPhoneValid);
-// $("#age").keyup(userAgeValid);
-// $("#password").keyup(userPasswordValid);
-// $("#rePassword").keyup(userRePasswordValid);
+let userName = document.getElementById("name")
+let userEmail = document.getElementById("email")
+let userPhone = document.getElementById("phone")
+let userAge = document.getElementById("age")
+let userPassword = document.getElementById("password")
+let userRePassword = document.getElementById("rePassword")
 
 
-// function userNameValid() {
-//     return 1 == /^[a-zA-Z0-9]+$/.test(userName.value) ? ((userNameAlert.style.display = "none"), !0) : ((userNameAlert.style.display = "block"), !1);
-// }
-// function userEmailValid() {
-//     return 1 == /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(userEmail.value) ? ((userEmailAlert.style.display = "none"), !0) : ((userEmailAlert.style.display = "block"), !1);
-// }
-// function userPhoneValid() {
-//     return 1 == /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(userPhone.value) ? ((userPhoneAlert.style.display = "none"), !0) : ((userPhoneAlert.style.display = "block"), !1);
-// }
-// function userAgeValid() {
-//     return 1 == /^[1-9][0-9]?$|^100$/.test(userAge.value) ? ((userAgeAlert.style.display = "none"), !0) : ((userAgeAlert.style.display = "block"), console.log("dkldkdlkdlk"), !1);
-// }
-// function userPasswordValid() {
-//     return 1 == /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(userPassword.value) ? ((userpasswordAlert.style.display = "none"), !0) : ((userpasswordAlert.style.display = "block"), !1);
-// }
-// function userRePasswordValid() {
-//     return userPassword.value == userRePassword.value ? ((userRepasswordAlert.style.display = "none"), !0) : ((userRepasswordAlert.style.display = "block"), !1);
-// }
+function userNameValid() 
+{
+    if(/^[a-zA-Z0-9]+$/.test(userName.value))
+    {
+        $(userName).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userName).next(".alert").css("display", "block");
+        return false;
+    }
+}
 
+function userEmailValid() 
+{
+    if(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(userEmail.value))
+    {
+        $(userEmail).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userEmail).next(".alert").css("display", "block");
+        return false;
+    }
+}
+function userPhoneValid() 
+{
+    if(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(userPhone.value))
+    {
+        $(userPhone).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userPhone).next(".alert").css("display", "block");
+        return false;
+    }
+}
+function userAgeValid() 
+{
+    if(/^[1-9][0-9]?$|^100$/.test(userAge.value))
+    {
+        $(userAge).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userAge).next(".alert").css("display", "block");
+        return false;
+    }
+}
+function userPasswordValid()
+ {
+    if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(userPassword.value))
+    {
+        $(userPassword).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userPassword).next(".alert").css("display", "block");
+        return false;
+    }
+}
+function userRePasswordValid() 
+{
+    if(userPassword.value == userRePassword.value)
+    {
+        $(userRePassword).next(".alert").css("display", "none");
+        return true;
+    }
+    else
+    {
+        $(userRePassword).next(".alert").css("display", "block");
+        return false;
+    }
+}
+
+
+
+$(userName).keyup(userNameValid);
+$(userEmail).keyup(userEmailValid);
+$(userPhone).keyup(userPhoneValid);
+$(userAge).keyup(userAgeValid);
+$(userPassword).keyup(userPasswordValid);
+$(userRePassword).keyup(userRePasswordValid);
+
+
+$("#contact").click(function () 
+{
+    if(userNameValid() && userEmailValid() && userPhoneValid() && 
+       userAgeValid() && userPasswordValid() && userRePasswordValid())
+    {
+        $("#contact button").removeClass("disabled");
+    }
+    else
+    {
+        $("#contact button").addClass("disabled");
+    }
+});
 

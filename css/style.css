@@ -144,13 +144,7 @@ body
 }
 /*************************************** Contact Section *************************************** */
 
-#contact button
+#contact .alert
 {
-    outline: none;
-    box-shadow: none;
-}
-#contact button:hover
-{
-    background-color: inherit;
-    color: #dc3545;
+	display: none;
 }

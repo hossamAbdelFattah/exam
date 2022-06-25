@@ -12,31 +12,31 @@
 
 
     <!------------------------------------ sideNavBar Section ------------------------------------>
-    <section id="navBarSection" class="position-fixed top-0 start-0 vh-100 d-flex">
+    <section id="navBarSection" class="position-fixed top-0 vh-100 d-flex">
 
-        <div id="sideNavBar" class="overflow-hidden d-flex flex-column justify-content-between">
-            <ul class="list-unstyled">
-                <li>
-                    <a href="#">Now playing</a>
+        <div id="sideNavBar" class=" d-flex flex-column justify-content-between">
+            
+            <ul class="list-unstyled custom-padding-left overflow-hidden">
+                <li class="item1">
+                    <a id="nowPlaying" href="#">Now playing</a>
                 </li>
-                <li>
-                    <a href="#">Popular</a>
+                <li class="item2">
+                    <a id="popular" href="#">Popular</a>
                 </li>
-                <li>
-                    <a href="#">Top Rated</a>
+                <li class="item3">
+                    <a id="topRated" href="#">Top Rated</a>
                 </li>
-                <li>
-                    <a href="#">Trending</a>
+                <li class="item4">
+                    <a id="trending" href="#">Trending</a>
                 </li>
-                <li>
-                    <a href="#">Upcoming</a>
+                <li class="item5">
+                    <a id="upcoming" href="#">Upcoming</a>
                 </li>
-                <li>
+                <li class="item6">
                     <a href="#contact">Contact Us</a>
                 </li>
             </ul>
-
-            <div class="mb-4">
+            <div class="mb-4 custom-padding-left">
                 <div class="d-flex mb-3">
                     <a class="ps-3 pe-3" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="pe-3" href="#"><i class="fab fa-twitter"></i></a>
@@ -52,7 +52,7 @@
                 <img src="images/logo.png" alt="">
             </div>
             <div>
-                <i class="fa fa-times"></i>
+                <i id="open-close-button" class="fa fa-align-justify"></i>
             </div>
             <div>
                 <i class="fas fa-globe d-block pb-3"></i>
@@ -60,124 +60,33 @@
             </div>
         </div>
 
-        
-    </section>
-    
 
-    <section class="py-5">
+    </section>
+
+
+    <section class="py-5 ">
         <!------------------------------------ Search Section ------------------------------------>
         <div class="search container w-75">
             <div class="row">
                 <div class="col-md-6">
-                    <input type="text" class="form-control mb-5 bg-transparent" placeholder="get movies by word...">
+                    <input type="text" id="allMovies" class="form-control mb-5 bg-transparent" placeholder="get movies by word...">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="text" class="form-control mb-5 bg-transparent" placeholder="search...">
+                    <input type="text" id="word" class="form-control mb-5 bg-transparent" placeholder="search...">
                 </div>
             </div>
         </div>
 
         <!------------------------------------ Main Section ------------------------------------>
 
-        <div class="container pt-4">
-            <div class="row g-4">
+        <div class="container pt-3">
+            <div class="row g-4" id="searchResult">
+            </div>
+        </div>
 
-                <div class="col-lg-4 col-md-6 shadow">
-                    <div class="cover-image">
-                        <img src="images/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="cover-image">
-                        <img src="images/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="cover-image">
-                        <img src="images/QaNLpq3Wuu2yp5ESsXYcQCOpUk.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="cover-image">
-                        <img src="images/QaNLpq3Wuu2yp5ESsXYcQCOpUk.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="cover-image">
-                        <img src="images/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="cover-image">
-                        <img src="images/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="">
-                        <div class="image-overlay">
-                            <div>
-                                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, illo!</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid porro quae, maxime
-                                    aliquam dolor id fugit excepturi, deleniti, natus dolores reiciendis rerum odit eos
-                                    provident expedita. Nam numquam inventore dicta?</p>
-                                <p>rate: 6.8</p>
-                                <p>2022-04-06</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container pt-0">
+            <div class="row g-4" id="moviesList">
             </div>
         </div>
 
@@ -193,27 +102,27 @@
 
             <div class="row pt-4">
                 <div class="col-md-6">
-                    <input type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Your Name">
+                    <input id="name" type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Your Name">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="email" class="form-control mb-4 bg-transparent" placeholder="Enter Email">
+                    <input id="email" type="email" class="form-control mb-4 bg-transparent" placeholder="Enter Email">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Phone">
+                    <input id="phone" type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Phone">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Age">
+                    <input id="age" type="text" class="form-control mb-4 bg-transparent" placeholder="Enter Age">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="password" class="form-control mb-4 bg-transparent" placeholder="Enter Password">
+                    <input id="password" type="password" class="form-control mb-4 bg-transparent" placeholder="Enter Password">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="password" class="form-control mb-4 bg-transparent" placeholder="Enter RePassword">
+                    <input id="rePassword" type="password" class="form-control mb-4 bg-transparent" placeholder="Enter RePassword">
                 </div>
             </div>
 

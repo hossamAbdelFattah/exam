@@ -77,16 +77,20 @@ body
 #navBarSection
 {
     z-index: 2;
+    left: -250px;
 }
+
 #sideNavBar
 {
     background-color: #000;
     width: 250px;
-    transition: all .5s;
+    transition: all 0.7s ease;
     color: #f9f6f6;
+}
+.custom-padding-left
+{
     padding-left: 30px;
 }
-
 #sideNavBar a
 {
     text-decoration: none;
@@ -97,9 +101,14 @@ body
 }
 #sideNavBar li
 {
-    padding-top: 25px;
+    padding-top: 500px;
+    opacity: 0;
 }
 
+#sideNavBar ul
+{
+    height: 300px;
+}
 #sideNavBar a:hover
  {
     color: #ff655c;
@@ -118,7 +127,7 @@ body
     height: 48px;
 }
 
-#navControl .fa-times
+#open-close-button
 {
     font-size: 25px;
     font-weight: 900;

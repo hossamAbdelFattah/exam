@@ -74,37 +74,65 @@ body
 
 /*************************************** sideNavBar Section *************************************** */
 
+#navBarSection
+{
+    z-index: 2;
+}
 #sideNavBar
 {
-    background-color: #414658;
+    background-color: #000;
     width: 250px;
     transition: all .5s;
-    z-index: 1;
+    color: #f9f6f6;
+    padding-left: 30px;
 }
 
 #sideNavBar a
 {
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1rem;
     color: white;
     display: block;
-    padding: 20px 8px 20px 32px;
-    transition: all .3s;
+    transition: all .2s;
 }
-
-#sideNavBar #closeBtn
+#sideNavBar li
 {
-    font-size: 36px;
-    padding-bottom: 0px;
+    padding-top: 25px;
 }
 
 #sideNavBar a:hover
  {
-    color: rgba(214, 46, 51, 0.4);
+    color: #ff655c;
 }
 
 
+#navControl
+{
+    width: 60px;
+    background-color: #f8f6f6;
+    left: 250px;
+}
 
+#navControl img
+{
+    height: 48px;
+}
+
+#navControl .fa-times
+{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+#navControl i
+{
+    cursor: pointer;
+}
+
+.gray-color
+{
+    color: #999;
+}
 /*************************************** Contact Section *************************************** */
 
 #contact button
